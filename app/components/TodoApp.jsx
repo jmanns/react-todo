@@ -17,7 +17,7 @@ const TodoApp = React.createClass({
           text: 'workout'
         }, {
           id: 4,
-          text: 'learn and understand React JS'
+          text: 'study'
         }
       ]
     }
