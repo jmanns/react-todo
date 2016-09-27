@@ -1,5 +1,3 @@
-React Timer Application
-
-A simple timer application built using React.
+Todo Application built using ReactJS.
 
 http://jmanns-react-todo.herokuapp.com/
