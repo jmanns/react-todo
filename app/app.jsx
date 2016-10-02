@@ -8,7 +8,6 @@ const actions = require('actions');
 const store = require('configureStore').configure();
 const TodoAPI = require('TodoAPI');
 
-
 store.subscribe(() => {
   let state = store.getState()
   console.log('New state', state);
