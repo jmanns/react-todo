@@ -1,4 +1,5 @@
 node_modules/
+public/bundle.js
+app/fire.js
 .jsbeautifyrc
 .jshintrc
-fire.js
