@@ -82,4 +82,26 @@ describe('Reducers', () => {
       expect(res[0].text).toEqual(todos[0].text);
     });
   });
+
+  describe('authReducer', () => {
+    it('should add authorized users id to state on login', () => {
+      let action = {
+        type: 'LOGIN',
+        uid: 123
+      };
+      let res = reducers.authReducer(undefined, df(action));
+      expect(res.uid).toEqual(123);
+    });
+
+    it('should remove authorized users id from state on logout', () => {
+      let authData = {
+        uid: 321
+      };
+      let action = {
+        type: 'LOGOUT'
+      };
+      let res = reducers.authReducer(authData, df(action));
+      expect(res.uid).toNotEqual({});
+    });
+  });
 });
