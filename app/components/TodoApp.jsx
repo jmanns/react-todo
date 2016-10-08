@@ -1,6 +1,7 @@
 import React from 'react';
 import * as Redux from 'react-redux';
 
+import ClearTodos from 'ClearTodos';
 import TodoList from 'TodoList';
 import AddTodo from 'AddTodo';
 import TodoSearch from 'TodoSearch';
@@ -27,6 +28,7 @@ export const TodoApp = React.createClass({
               <TodoSearch/>
               <TodoList/>
               <AddTodo/>
+              <ClearTodos/>
             </div>
           </div>
         </div>

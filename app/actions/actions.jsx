@@ -16,6 +16,12 @@ export let addTodo = (todo) => {
   };
 };
 
+export let clearTodos = (todo) => {
+  return {
+    type: 'CLEAR_TODOS',
+  };
+};
+
 export let startAddTodo = (text) => {
   return (dispatch, getState) => {
     let todo = {
@@ -53,6 +59,16 @@ export let startAddTodos = () => {
         return arr;
       }, []);
       return dispatch(addTodos(todosArray));
+    });
+  };
+};
+
+export let removeTodos = () => {
+  return (dispatch, getState) => {
+    let uid = getState().auth.uid;
+    return firebaseRef.child(`users/${uid}/todos`).remove().then(() => {
+
+      return dispatch(clearTodos());
     });
   };
 };
