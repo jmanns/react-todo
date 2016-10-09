@@ -5,6 +5,7 @@ const actions = require('actions');
 export const TodoSearch = React.createClass({
   render () {
     let {dispatch, showCompleted, searchText} = this.props;
+    console.log(this.props);
      return (
       <div className="container__header">
         <div>

@@ -102,10 +102,12 @@ export let startToggleTodo = (id, completed) => {
   };
 };
 
-export let login = (uid) => {
+export let login = (user) => {
+  let {uid, name} = user
   return {
     type: 'LOGIN',
-    uid
+    uid,
+    name
   };
 };
 
