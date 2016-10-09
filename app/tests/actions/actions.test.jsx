@@ -73,10 +73,16 @@ describe('Actions', () => {
   it('should generate the login action object', () => {
     let action = {
       type: 'LOGIN',
-      uid: 33
+      uid: 33,
+      name: 'Bob'
+    };
+
+    let user = {
+      uid: 33,
+      name: 'Bob'
     }
 
-    let res = actions.login(action.uid);
+    let res = actions.login(user);
 
     expect(res).toEqual(action);
   });
